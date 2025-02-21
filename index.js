@@ -1,12 +1,6 @@
-const axios = require('axios');
+const _ = require('lodash');
 
-async function fetchData() {
-    try {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/posts/1');
-        console.log(response.data);
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
-}
+const numbers = [5, 12, 8, 130, 44];
 
-fetchData();
+console.log(`Maximum: ${_.max(numbers)}`);
+console.log(`Minimum: ${_.min(numbers)}`);
